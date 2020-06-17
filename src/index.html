@@ -75,16 +75,24 @@
 Возможно, проблема с соединением или сервер недоступен.
 Подождите немного и попробуйте ещё раз.</p>
   </section>
-  <section class="result result_hidden root__section">
+  <section class="result  root__section">
+    <!-- result_hidden -->
     <div class="result__header">
         <h2 class="block__title">Результаты 
 поиска</h2>                
     </div>
-    <div class="result__cardlist">
+    <ul class="result__cardlist">
       
-      
-    </div>
-    
+    </ul>
+    <ul class="pagination">
+      <li class="pag-item">&#171;</li>
+      <li class="pag-item">1</li>
+      <li class="pag-item">2</li>
+      <li class="pag-item">3</li>
+      <li class="pag-item">4</li>
+      <li class="pag-item">5</li>
+      <li class="pag-item">&#187;</li>
+    </ul>
   </section>  
     </main>
   </div>
@@ -101,6 +109,18 @@
       </ul>
     </footer>
   </div>
+
+<template id="cardTemplate">
+  <li class="card">
+    <p class="card__name">Имя репозитория</p>
+    <div class="card__rate">
+      <svg class="card__rate-image" viewBox="0 0 300 300"><path fill="orange" stroke="orange" stroke-width="10" color="orange" d="M150 25l29 86h90l-72 54 26 86-73-51-73 51 26-86-72-54h90z"/></svg>
+      <p class="card__rate-total">5423</p>
+    </div>
+    <p class="card__last-update">Последний коммит: <strong class="card__date">2 Июня 2020</strong> </p>
+    <a href="#" class="card__git-link">Открыть на GitHub</a>
+  </li>
+</template>
 
 </body>
 <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>

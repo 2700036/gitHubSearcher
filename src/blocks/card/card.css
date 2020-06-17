@@ -1,28 +1,63 @@
-@import url(./__date/card__date.css);
-@import url(./__image/card__image.css);
-@import url(./__source/card__source.css);
-@import url(./__text/card__text.css);
-@import url(./__title/card__title.css);
-
-.card {
-  position: relative;  
-  width: 100%;   
+.card {     
   display: flex;
-  flex-direction: column;
-  padding: 6%;
-  border-radius: 16px;
-  background: #FFF;
-  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 25px;
+  border: 1px solid #000;
+  border-radius: 50px;
+    
+  margin-bottom: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+	transition: all 0.2s ease-in-out;    
+}
+.card:hover{
+  cursor: pointer;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.card__name{
+  font-size: 18px;
+  width: 40%;
+}
+.card__rate{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__rate-image{
+  width: 30px;
+  height: 30px;
+}
+.card__rate-total{
+  font-size: 15px;
+  font-weight: bolder;
+  margin-left: 3px;
+}
+.card__last-update{
+  font-size: 14px;
+}
+.card__date{
+
+}
+.card__git-link{
+  
+  cursor: pointer;
 }
 
+@media screen and (max-width: 1080px) {
+  .card {
+    font-size: 14px;  
+  }
+  .card__name{
+    width: 30%;
+  }
+}
 
-
-@media screen and (max-width: 650px) {
+/* @media screen and (max-width: 650px) {
   .card:not(:last-child) {
     margin-bottom: 3%;
     padding: 4%;   
   }
-}
+} */
 
 
 
