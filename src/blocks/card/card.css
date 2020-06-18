@@ -16,7 +16,9 @@
 }
 .card__name{
   font-size: 18px;
-  width: 40%;
+  text-overflow: ellipsis;
+    overflow: hidden;
+    flex-basis: 370px;
 }
 .card__rate{
   display: flex;
@@ -48,7 +50,7 @@
     font-size: 14px;  
   }
   .card__name{
-    width: 30%;
+    flex-basis: 270px;
   }
 }
 

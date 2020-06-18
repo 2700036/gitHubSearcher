@@ -7,7 +7,12 @@ export function searchRepos(searchWord, page=1) {
           return res.json();
         }
         return Promise.reject(`Ошибка: ${res.status}`);
-      });
+      })
+      .then(res =>{
+                
+        
+        return res;
+      })
   }
 
 
