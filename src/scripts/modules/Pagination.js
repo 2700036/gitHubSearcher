@@ -1,5 +1,7 @@
-import {cardContainer, pagWrapper, cardTemplate} from './../../pages/index';
-import { Card } from './Card';
+import {results, pagWrapper, cardTemplate} from './../../pages/index';
+import Card from './Card';
+import { getLastCommit } from './GitApi';
+import dateConverter from './../utils/dateConverter';
 export let state = {
   querySet: [],
   total: 1,
@@ -36,6 +38,9 @@ export function createButtons(pages, wrapper) {
   for (let page = maxLeft; page < maxRight; page++) {
     wrapper.append(createButton(page, page));
   }
+  const buttons = Array.from(wrapper.querySelectorAll('.pag-item'));  
+  buttons.length?buttons.find(el => el.textContent == state.page).classList.add('pag-item_active'):0; 
+
   if (state.page != 1 && state.page != 2 && state.page != 3 && state.page != 4) {
     wrapper.prepend(createButton(1, '&#171;'));
   }
@@ -44,12 +49,12 @@ export function createButtons(pages, wrapper) {
   }
 }
 
-export function buildTable() {
-  cardContainer.innerHTML = '';
+export function pagination() {   
   const pages = Math.ceil(state.total / state.rows);
   state.querySet.forEach((el) => {
-    const card = new Card(el, cardTemplate, cardContainer);
-    card.addCard();
+    const card = new Card(el, cardTemplate, getLastCommit, dateConverter);
+    results.addCard(card._createCard());   
   });
+  results.showResults();
   createButtons(pages, pagWrapper);
 }

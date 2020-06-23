@@ -1,9 +1,0 @@
-.slider__card-commit {
-    font-size: 16px;
-    line-height: 22px; 
-    text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden; 
-}

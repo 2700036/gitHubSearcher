@@ -23,7 +23,7 @@
     <div class="search">
       <div class="search__content root__section">
         <h1 class="search__title">Поиск по репозиториям GitHub'а</h1>
-        <p class="description">Введите в поиске имя репозитория</p>
+        <p class="description">Введите в поиске ключевое слово или имя репозитория</p>
         <form class="search__form">
             <span class="searh__input-error searh__input-error_hidden">Нужно ввести ключевое слово</span>
             <input id="input" type="text" class="searh__input" pattern="^[а-яА-Яa-zA-Z0-9]{1}[\sа-яА-Яa-zA-Z0-9,.-]+" placeholder="Введите имя репозитория" minlength="2" maxlength="30" autocomplete="off" required>
@@ -35,7 +35,7 @@
   <main class="main-content">
   <section class="preloader preloader_hidden">
     <i class="preloader__circle"></i>
-    <p class="preloader__text">Идет поиск новостей...</p>
+    <p class="preloader__text">Идет поиск по GitHub...</p>
   </section>
   <section class="not-found not-found_hidden">
       <img class="not-found__pic" src="<%=require('./images/not-found_v1.png').default%>" alt="Ничего не найдено">
@@ -75,23 +75,15 @@
 Возможно, проблема с соединением или сервер недоступен.
 Подождите немного и попробуйте ещё раз.</p>
   </section>
-  <section class="result  root__section">
-    <!-- result_hidden -->
+  <section class="result result_hidden root__section">
+    
     <div class="result__header">
-        <h2 class="block__title">Результаты 
-поиска</h2>                
+        <h2 class="block__title">Выберите репозиторий</h2>                
     </div>
     <ul class="result__cardlist">
       
     </ul>
     <ul class="pagination">
-      <!-- <li class="pag-item">&#171;</li>
-      <li class="pag-item">1</li>
-      <li class="pag-item">2</li>
-      <li class="pag-item">3</li>
-      <li class="pag-item">4</li>
-      <li class="pag-item">5</li>
-      <li class="pag-item">&#187;</li> -->
     </ul>
   </section>  
     </main>
@@ -112,13 +104,13 @@
 
 <template id="cardTemplate">
   <li class="card">
-    <p class="card__name">Имя репозитория</p>
+    <p class="card__name"></p>
     <div class="card__rate">
-      <svg class="card__rate-image" viewBox="0 0 300 300"><path fill="orange" stroke="orange" stroke-width="10" color="orange" d="M150 25l29 86h90l-72 54 26 86-73-51-73 51 26-86-72-54h90z"/></svg>
-      <p class="card__rate-total">5423</p>
+      <svg class="card__rate-image" viewBox="0 0 300 300"><path fill="#ffd91e" stroke="#e8c100" stroke-width="10" color="#ffd91e" d="M150 25l29 86h90l-72 54 26 86-73-51-73 51 26-86-72-54h90z"/></svg>
+      <p class="card__rate-total"></p>
     </div>
-    <p class="card__last-update">Последний коммит: <strong class="card__date">2 Июня 2020</strong> </p>
-    <a href="#" class="card__git-link">Открыть на GitHub</a>
+    <p class="card__last-update">Последний коммит: <strong class="card__date">Не коммитился</strong> </p>
+    <a href="#" class="card__git-link">Открыть&nbsp;на&nbsp;GitHub</a>
   </li>
 </template>
 
