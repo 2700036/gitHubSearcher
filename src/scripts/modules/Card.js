@@ -42,7 +42,7 @@ export default class Card {
             sessionStorage.setItem('repoDescription', this._description); 
             sessionStorage.setItem('repoLanguage', this._language); 
             sessionStorage.setItem('repoCommit', this._lastCommit); 
-            window.open('/about.html');
+            window.open('./about.html');
         })
     }
     
