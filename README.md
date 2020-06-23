@@ -7,3 +7,6 @@ npm run build
 npm run dev
 # gh-pages
 npm run deploy
+
+# Ссылка на веб-страницу:
+https://2700036.github.io/gitHubSearcher/
