@@ -2,10 +2,9 @@ export function searchRepos(searchWord, page=1) {
     return fetch(`https://api.github.com/search/repositories?q=${searchWord}&sort=stars&order=desc&per_page=10&page=${page}`, {
       method: "GET",
       // mode: 'cors',
-        headers: {
-        Authorization: 'token 0e476dacf5f977b5f3d833919ac0984c13194c92'
-          
-        }      
+        // headers: {
+        // Authorization: 'token 0e476dacf5f977b5f3d833919ac0984c13194c92'          
+        // }      
     })
     .then(res => {
         if (res.ok) {
@@ -24,9 +23,9 @@ export function getLastCommit(owner, repo) {
     {
       method: "GET",
       // mode: 'cors',
-        headers: {
-        Authorization: 'token 0e476dacf5f977b5f3d833919ac0984c13194c92'        
-        }      
+        // headers: {
+        // Authorization: 'token 0e476dacf5f977b5f3d833919ac0984c13194c92'        
+        // }      
     })
     .then(res => {
         if (res.ok) {
@@ -44,9 +43,9 @@ export function getLastCommit(owner, repo) {
     {
       method: "GET",
       // mode: 'cors',
-        headers: {
-        Authorization: 'token 0e476dacf5f977b5f3d833919ac0984c13194c92'        
-        }      
+        // headers: {
+        // Authorization: 'token 0e476dacf5f977b5f3d833919ac0984c13194c92'        
+        // }      
     })
     .then(res => {
         if (res.ok) {
@@ -65,10 +64,10 @@ export function getLastCommit(owner, repo) {
   export function getPopularRepos() {
     return fetch(`https://api.github.com/search/repositories?q=stars&sort=stars&per_page=10&`, {
       method: "GET",
-      mode: 'cors',
-       headers: {
-       Authorization: 'token 0e476dacf5f977b5f3d833919ac0984c13194c92'          
-       }      
+      // mode: 'cors',
+       // headers: {
+       // Authorization: 'token 0e476dacf5f977b5f3d833919ac0984c13194c92'          
+       // }      
     })
     .then(res => {
         if (res.ok) {
