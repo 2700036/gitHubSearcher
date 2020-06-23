@@ -23,11 +23,11 @@
     <div class="search">
       <div class="search__content root__section">
         <h1 class="search__title">Поиск по репозиториям GitHub'а</h1>
-        <p class="description">Введите в поиске имя репозитория</p>
+        <p class="description">Введите в поиске ключевое слово или имя репозитория</p>
         <form class="search__form">
             <span class="searh__input-error searh__input-error_hidden">Нужно ввести ключевое слово</span>
             <input id="input" type="text" class="searh__input" pattern="^[а-яА-Яa-zA-Z0-9]{1}[\sа-яА-Яa-zA-Z0-9,.-]+" placeholder="Введите имя репозитория" minlength="2" maxlength="30" autocomplete="off" required>
-            <button class="button search__button" type="submit" disabled>Искать</button>
+            <button class="button search__button" type="submit">Искать</button>
         </form>
       </div>     
     </div>    
@@ -35,7 +35,7 @@
   <main class="main-content">
   <section class="preloader preloader_hidden">
     <i class="preloader__circle"></i>
-    <p class="preloader__text">Идет поиск новостей...</p>
+    <p class="preloader__text">Идет поиск по GitHub...</p>
   </section>
   <section class="not-found not-found_hidden">
       <img class="not-found__pic" src="<%=require('./images/not-found_v1.png').default%>" alt="Ничего не найдено">
@@ -76,15 +76,15 @@
 Подождите немного и попробуйте ещё раз.</p>
   </section>
   <section class="result result_hidden root__section">
-    <div class="result__header">
-        <h2 class="block__title">Результаты 
-поиска</h2>                
-    </div>
-    <div class="result__cardlist">
-      
-      
-    </div>
     
+    <div class="result__header">
+        <h2 class="block__title">Выберите репозиторий</h2>                
+    </div>
+    <ul class="result__cardlist">
+      
+    </ul>
+    <ul class="pagination">
+    </ul>
   </section>  
     </main>
   </div>
@@ -101,6 +101,18 @@
       </ul>
     </footer>
   </div>
+
+<template id="cardTemplate">
+  <li class="card">
+    <p class="card__name"></p>
+    <div class="card__rate">
+      <svg class="card__rate-image" viewBox="0 0 300 300"><path fill="#ffd91e" stroke="#e8c100" stroke-width="10" color="#ffd91e" d="M150 25l29 86h90l-72 54 26 86-73-51-73 51 26-86-72-54h90z"/></svg>
+      <p class="card__rate-total"></p>
+    </div>
+    <p class="card__last-update">Последний коммит: <strong class="card__date">Не коммитился</strong> </p>
+    <a href="#" class="card__git-link">Открыть&nbsp;на&nbsp;GitHub</a>
+  </li>
+</template>
 
 </body>
 <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>

@@ -1,0 +1,26 @@
+.pagination {
+    list-style: none;
+    display: flex;
+    margin: auto;
+}
+
+.pag-item {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #808080a1;
+    color: #5f5f5f;
+    margin: 1px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13)
+}
+.pag-item:hover {
+    background-color: #ffda0054;
+}
+
+.pag-item_active {
+    background-color: #ffda00;
+}
