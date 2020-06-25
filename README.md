@@ -10,4 +10,4 @@ npm run dev
 npm run deploy
 
 # Ссылка на веб-страницу:
-https://2700036.github.io/gitHubSearcher/
+https://gitsearch.000webhostapp.com/index.html
