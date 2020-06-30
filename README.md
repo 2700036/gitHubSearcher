@@ -5,7 +5,7 @@
 # production
 npm run build
 # develop
-npm run dev
+npm start
 # gh-pages
 npm run deploy
 
