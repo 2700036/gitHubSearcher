@@ -32,7 +32,10 @@ export default class Card {
           this._card.querySelector('.card__date').style.opacity = 1;
     }
     _setEvenListener(){
-        this._card.addEventListener('click', ()=>{
+        this._card.querySelector('.card__git-link').addEventListener('click', (ev)=>{
+            ev.stopPropagation();
+        })
+        this._card.addEventListener('click', (ev)=>{            
             sessionStorage.setItem('repoName', this._name); 
             sessionStorage.setItem('repoUrl', this._gitUrl); 
             sessionStorage.setItem('ownerName', this._owner); 
@@ -42,7 +45,7 @@ export default class Card {
             sessionStorage.setItem('repoDescription', this._description); 
             sessionStorage.setItem('repoLanguage', this._language); 
             sessionStorage.setItem('repoCommit', this._lastCommit); 
-            window.open('./about.html');
+            window.location.href = './about.html';           
         })
     }
     
